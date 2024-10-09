@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7c6ca54c88634a43abf00cca5dff52f, type: 3}
+  m_Name: ObjectsToSpawnSide
+  m_EditorClassIdentifier: 
+  value:
+  - {fileID: 5368976833762122042, guid: f906c2f1e4327a14b80aa5b6bf10abc3, type: 3}
+  - {fileID: 6311351674273738036, guid: 3291101aa93e931419305e3e412869de, type: 3}
+  - {fileID: 7572440367459834674, guid: 484fc8d16f25381478093bf409636db1, type: 3}
+  - {fileID: 993568116079097095, guid: ce253ad2b7826064a9b0a7ab16d4087e, type: 3}
+  - {fileID: 9050707802333681860, guid: 482678ffd7448b84982b7cc61631bffa, type: 3}

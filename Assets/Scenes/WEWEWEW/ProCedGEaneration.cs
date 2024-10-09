@@ -6,12 +6,14 @@ public class ProCedGEaneration : MonoBehaviour
 {
     [Header("Variabels")]
     [SerializeField] private int spawnDistance;
-    [SerializeField] private GameObject[] objectToSpawn;
+    [SerializeField] private CityBlock[] blocksToSpawn;
     [SerializeField] private int generationSize;
     [SerializeField] private int generationAmount;
+    [SerializeField] private int safeZoneAmount;
 
     private GameObject objectHolder;
     private GenerationNode[] nodes;
+    private CityBlock[] spawnedBlocks;
 
     private List<Vector2Int> directions = new List<Vector2Int>
     {
@@ -36,6 +38,7 @@ public class ProCedGEaneration : MonoBehaviour
         Destroy(objectHolder);
         objectHolder = new GameObject();
         nodes = new GenerationNode[generationSize + 1];
+        spawnedBlocks = new CityBlock[generationSize + 1];
         nodes[generationSize] = new GenerationNode(new Vector2Int(0, 0), spawnDistance);
         for(int a = 0; a < generationAmount; a++)
         {
@@ -44,16 +47,6 @@ public class ProCedGEaneration : MonoBehaviour
             {
                 GetNextGridPosition(b);
             }
-        }
-
-        //CheckNodes();
-    }
-
-    private void CheckNodes()
-    {
-        for(int a = 0; a < generationSize; a++)
-        {
-            Debug.Log(nodes[a].gridPosition);
         }
     }
 
@@ -216,7 +209,33 @@ public class ProCedGEaneration : MonoBehaviour
     {
         for(int a = 0; a < generationSize + 1; a++)
         {
-            Instantiate(objectToSpawn[nodes[a].tileType], new Vector3(nodes[a].worldPosition.x, 0f, nodes[a].worldPosition.y), Quaternion.Euler(0f, nodes[a].rotation, 0f), objectHolder.transform);
+            spawnedBlocks[a] = Instantiate(blocksToSpawn[nodes[a].tileType], new Vector3(nodes[a].worldPosition.x, 0f, nodes[a].worldPosition.y), Quaternion.Euler(0f, 0f, 0f), objectHolder.transform);
+            spawnedBlocks[a].PlatformRotation = nodes[a].rotation;
+        }
+        spawnedBlocks[Random.Range(0, generationSize + 1)].HasStart = true;
+        for(int a = 0; a < 1;)
+        {
+            int b = Random.Range(0, generationSize + 1);
+            if(!spawnedBlocks[b].HasStart)
+            {
+                spawnedBlocks[b].HasExit = true;
+                a++;
+            }
+        }
+
+        for(int a = 0; a < safeZoneAmount;)
+        {
+            int b = Random.Range(0, generationSize + 1);
+            if(!spawnedBlocks[b].HasSafeZone)
+            {
+                spawnedBlocks[b].HasSafeZone = true;
+                a++;
+            }
+        }
+
+        for(int a = 0; a < generationSize + 1; a++)
+        {
+            spawnedBlocks[a].SpawnObjects();
         }
     }
 }
