@@ -206,7 +206,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 4597
+  m_VersionIndex: 4600
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -330,11 +330,10 @@ MonoBehaviour:
   startObjectes: {fileID: 11400000, guid: 9405474f2960ac64cb5f3ec3608a8806, type: 2}
   exitObjects: {fileID: 11400000, guid: 3e946ab5f398d0d44893a85fe88073e9, type: 2}
   safeZoneObjects: {fileID: 11400000, guid: a9f1dab7eb6b29441bb69c20d82571ff, type: 2}
+  monsterSpawnerObjects: {fileID: 11400000, guid: a57889acd5407b64dbdabc9f9009065a, type: 2}
   sideObjectsToGenerate: 12
   roadObjectsToGenerate: 3
-  hasStart: 0
-  hasExit: 0
-  hasSafeZone: 0
+  monsterSpawnerObjectsToGenerate: 2
   platformSize: {x: 60, y: 60}
   safeZonePoints:
   - {x: 30, y: 10}

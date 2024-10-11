@@ -10,10 +10,12 @@ public class CityBlock : MonoBehaviour
     [SerializeField] private ObjectArrayObject startObjectes;
     [SerializeField] private ObjectArrayObject exitObjects;
     [SerializeField] private ObjectArrayObject safeZoneObjects;
+    [SerializeField] private ObjectArrayObject monsterSpawnerObjects;
 
     [Header("Generation Values")]
     [SerializeField] private int sideObjectsToGenerate;
     [SerializeField] private int roadObjectsToGenerate;
+    [SerializeField] private int monsterSpawnerObjectsToGenerate;
 
     private GameObject objHolder;
     private bool hasStart;
@@ -74,6 +76,11 @@ public class CityBlock : MonoBehaviour
         for(int a = 0; a < sideObjectsToGenerate; a++)
         {
             GenerateObject(sideGrid, sideObjects);
+        }
+
+        for(int a = 0; a < monsterSpawnerObjectsToGenerate; a++)
+        {
+            GenerateObject(roadGrid, monsterSpawnerObjects);
         }
 
         for(int a = 0; a < roadObjectsToGenerate; a++)

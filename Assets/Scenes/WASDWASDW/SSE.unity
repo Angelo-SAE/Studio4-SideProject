@@ -253,11 +253,10 @@ MonoBehaviour:
   startObjectes: {fileID: 11400000, guid: 9405474f2960ac64cb5f3ec3608a8806, type: 2}
   exitObjects: {fileID: 11400000, guid: 3e946ab5f398d0d44893a85fe88073e9, type: 2}
   safeZoneObjects: {fileID: 11400000, guid: a9f1dab7eb6b29441bb69c20d82571ff, type: 2}
+  monsterSpawnerObjects: {fileID: 0}
   sideObjectsToGenerate: 6
   roadObjectsToGenerate: 9
-  hasStart: 0
-  hasExit: 0
-  hasSafeZone: 0
+  monsterSpawnerObjectsToGenerate: 0
   platformSize: {x: 50, y: 50}
   safeZonePoints:
   - {x: 10, y: 10}
@@ -1177,11 +1176,10 @@ MonoBehaviour:
   startObjectes: {fileID: 11400000, guid: 9405474f2960ac64cb5f3ec3608a8806, type: 2}
   exitObjects: {fileID: 11400000, guid: 3e946ab5f398d0d44893a85fe88073e9, type: 2}
   safeZoneObjects: {fileID: 11400000, guid: a9f1dab7eb6b29441bb69c20d82571ff, type: 2}
+  monsterSpawnerObjects: {fileID: 0}
   sideObjectsToGenerate: 6
   roadObjectsToGenerate: 9
-  hasStart: 0
-  hasExit: 0
-  hasSafeZone: 0
+  monsterSpawnerObjectsToGenerate: 0
   platformSize: {x: 50, y: 50}
   safeZonePoints:
   - {x: 10, y: 10}
@@ -1215,7 +1213,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1810649436}
+  m_Mesh: {fileID: 1495088032}
 --- !u!33 &1484033182
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -2210,11 +2208,10 @@ MonoBehaviour:
   startObjectes: {fileID: 11400000, guid: 9405474f2960ac64cb5f3ec3608a8806, type: 2}
   exitObjects: {fileID: 11400000, guid: 3e946ab5f398d0d44893a85fe88073e9, type: 2}
   safeZoneObjects: {fileID: 11400000, guid: a9f1dab7eb6b29441bb69c20d82571ff, type: 2}
+  monsterSpawnerObjects: {fileID: 11400000, guid: a57889acd5407b64dbdabc9f9009065a, type: 2}
   sideObjectsToGenerate: 6
   roadObjectsToGenerate: 9
-  hasStart: 0
-  hasExit: 0
-  hasSafeZone: 0
+  monsterSpawnerObjectsToGenerate: 5
   platformSize: {x: 50, y: 50}
   safeZonePoints:
   - {x: 10, y: 10}
@@ -2233,7 +2230,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 617693748}
   - {fileID: 1438652069}
-  - {fileID: 4540129560954943436}
   - {fileID: 1484033186}
   - {fileID: 893404988}
   - {fileID: 1272709702}
+  - {fileID: 4540129560954943436}

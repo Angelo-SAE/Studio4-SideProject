@@ -134,8 +134,9 @@ GameObject:
   - component: {fileID: 603157624}
   - component: {fileID: 603157623}
   - component: {fileID: 603157622}
+  - component: {fileID: 603157626}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -229,6 +230,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &603157626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603157621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 562488b71b6b5a843bcd262bd68af077, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerPosition: {fileID: 11400000, guid: e485608847fb9f946b514e84399a8b53, type: 2}
 --- !u!1 &694461595
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,6 +337,57 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &782005277
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 782005279}
+  - component: {fileID: 782005278}
+  m_Layer: 0
+  m_Name: Spawn Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &782005278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782005277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 502099d89ec182249afaea05062a2727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnerList: {fileID: 11400000, guid: 9de11b7a405a66143b0e3a62b8996cd0, type: 2}
+  monsterSets: {fileID: 11400000, guid: 23f45e93512292d48945ce89d47c3df3, type: 2}
+  playerPosition: {fileID: 11400000, guid: e485608847fb9f946b514e84399a8b53, type: 2}
+  creditProductionSpeed: 4
+  spawnCredits: 0
+  spawnAmount: 3
+  spawnCost: 0
+--- !u!4 &782005279
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782005277}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1306502490
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,6 +417,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8ae22a7ecbaa244bbbc33b21d2fba60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnerList: {fileID: 11400000, guid: 9de11b7a405a66143b0e3a62b8996cd0, type: 2}
   spawnDistance: 60
   blocksToSpawn:
   - {fileID: 5360977922202778497, guid: a34a871cd534ba9459d41b18ecb155a9, type: 3}
@@ -359,8 +425,8 @@ MonoBehaviour:
   - {fileID: 7584977564655588050, guid: 4b0e0238f00790049b471914b1321771, type: 3}
   - {fileID: 3396196888080502861, guid: 3d886762a4c0c7d41b0b20ade9808af6, type: 3}
   - {fileID: 4241481868948584550, guid: d57a7159735fec44c84a06ab27841fa9, type: 3}
-  generationSize: 21
-  generationAmount: 3
+  generationSize: 8
+  generationAmount: 1
   safeZoneAmount: 8
 --- !u!4 &1306502492
 Transform:
@@ -477,3 +543,4 @@ SceneRoots:
   - {fileID: 694461597}
   - {fileID: 603157625}
   - {fileID: 1306502492}
+  - {fileID: 782005279}

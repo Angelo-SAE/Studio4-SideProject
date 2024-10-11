@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12150ca6fa980a241afe9f3b0ccdfe92, type: 3}
+  m_Name: MonsterSets
+  m_EditorClassIdentifier: 
+  currentMaxSpawn: 4
+  sets:
+  - {fileID: 5179355238854296440, guid: 11aea85ef8d97ce4787dbb28f998f998, type: 3}
+  - {fileID: 4561916949974295103, guid: 0c017406c4c049c49a1fc628bd4b095c, type: 3}
+  - {fileID: 5334487090825992285, guid: 6f47778b66dd93746ad5ac3576ddcf02, type: 3}
+  - {fileID: 7367280241135848026, guid: d5be82480e453f34abf4f738a44183c9, type: 3}
+  spawnCosts: 050000000a0000000a00000014000000

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ProCedGEaneration : MonoBehaviour
 {
+    [Header("ScriptableObjects")]
+    [SerializeField] private GameObjectListObject spawnerList;
+
     [Header("Variabels")]
     [SerializeField] private int spawnDistance;
     [SerializeField] private CityBlock[] blocksToSpawn;
@@ -23,10 +26,11 @@ public class ProCedGEaneration : MonoBehaviour
         new Vector2Int(-1,0)
     };
 
-    private void Update()
+    private void Update() // for testing
     {
         if(Input.GetKeyDown(KeyCode.G))
         {
+            spawnerList.value = new List<GameObject>();
             GenerateMap();
             GetTileTypes();
             SpawnPlanes();
@@ -39,7 +43,7 @@ public class ProCedGEaneration : MonoBehaviour
         objectHolder = new GameObject();
         nodes = new GenerationNode[generationSize + 1];
         spawnedBlocks = new CityBlock[generationSize + 1];
-        nodes[generationSize] = new GenerationNode(new Vector2Int(0, 0), spawnDistance);
+        nodes[generationSize] = new GenerationNode(new Vector2Int(0, 0), spawnDistance); //This causes there to be two center spawns sometimes due to the worms passing through the center. probs make a check at the end when spawning to see if any are spawning at (0, 0)
         for(int a = 0; a < generationAmount; a++)
         {
             CreateFirstGridNode((generationSize / generationAmount * a));
